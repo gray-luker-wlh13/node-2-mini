@@ -7,6 +7,8 @@ app.use(express.json());
 //endpoints
 app.get('/api/books', bc.read);
 app.post('/api/books', bc.create);
+app.put('/api/books/:id', bc.update);
+app.delete('/api/books/:id', bc.delete);
 
-const port = 4020;
+const port = 4000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
